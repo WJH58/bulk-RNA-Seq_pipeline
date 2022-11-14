@@ -1,0 +1,4 @@
+Building DAG of jobs...
+MissingInputException in line 39 of /Users/flora/Documents/GitHub/bulk-RNA-Seq_pipeline/Snakefile:
+Missing input files for rule all:
+huangjiansong/S_vs_D/diff/diff_genes.xlsx
