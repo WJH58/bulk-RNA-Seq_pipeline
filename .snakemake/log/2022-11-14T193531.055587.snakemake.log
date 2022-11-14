@@ -1,0 +1,4 @@
+NameError in line 7 of /Users/flora/Documents/GitHub/bulk-RNA-Seq_pipeline/rules/diff.smk:
+name 'params' is not defined
+  File "/Users/flora/Documents/GitHub/bulk-RNA-Seq_pipeline/Snakefile", line 56, in <module>
+  File "/Users/flora/Documents/GitHub/bulk-RNA-Seq_pipeline/rules/diff.smk", line 7, in <module>

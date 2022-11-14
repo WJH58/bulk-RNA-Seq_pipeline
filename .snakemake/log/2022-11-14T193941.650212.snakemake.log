@@ -1,0 +1,4 @@
+WildcardError in line 6 of /Users/flora/Documents/GitHub/bulk-RNA-Seq_pipeline/rules/diff.smk:
+No values given for wildcard 'contrast'.
+  File "/Users/flora/Documents/GitHub/bulk-RNA-Seq_pipeline/Snakefile", line 56, in <module>
+  File "/Users/flora/Documents/GitHub/bulk-RNA-Seq_pipeline/rules/diff.smk", line 6, in <module>

@@ -1,0 +1,5 @@
+KeyError in line 18 of /Users/flora/Documents/GitHub/bulk-RNA-Seq_pipeline/Snakefile:
+'Requested level (contrast) does not match index name (None)'
+  File "/Users/flora/Documents/GitHub/bulk-RNA-Seq_pipeline/Snakefile", line 18, in <module>
+  File "/Users/flora/opt/miniconda3/lib/python3.8/site-packages/pandas/core/indexes/base.py", line 1473, in _get_level_values
+  File "/Users/flora/opt/miniconda3/lib/python3.8/site-packages/pandas/core/indexes/base.py", line 1410, in _validate_index_level

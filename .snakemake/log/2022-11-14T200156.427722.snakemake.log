@@ -1,0 +1,7 @@
+ValueError in line 6 of /Users/flora/Documents/GitHub/bulk-RNA-Seq_pipeline/rules/diff.smk:
+('Lengths must match to compare', (3,), (1,))
+  File "/Users/flora/Documents/GitHub/bulk-RNA-Seq_pipeline/Snakefile", line 55, in <module>
+  File "/Users/flora/Documents/GitHub/bulk-RNA-Seq_pipeline/rules/diff.smk", line 6, in <module>
+  File "/Users/flora/opt/miniconda3/lib/python3.8/site-packages/pandas/core/ops/common.py", line 65, in new_method
+  File "/Users/flora/opt/miniconda3/lib/python3.8/site-packages/pandas/core/ops/__init__.py", line 370, in wrapper
+  File "/Users/flora/opt/miniconda3/lib/python3.8/site-packages/pandas/core/ops/array_ops.py", line 224, in comparison_op

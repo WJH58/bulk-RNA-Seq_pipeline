@@ -1,7 +1,2 @@
-sample	treatment
-S44	case
-S50	case
-S52	case
-D13	control
-D27	control
-D33	control
+case	control	contrast
+S44 S50 S52	D13 D27 D33	S_vs_D
