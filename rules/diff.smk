@@ -5,9 +5,10 @@ rule get_diff_genes:
     params:
         case = units[units.contrast == expand("{contrast}", contrast = CONTRAST)]['case'],
         control = units[units.contrast == expand("{contrast}", contrast = CONTRAST)]['control'],
-        species = str(config['general']['species'])
+        species = str(config['general']['species']),
+        count_dat = COUNT_DAT
     log:
         expand(RESULT_DIR + "logs/{contrast}/get_diff_genes.log", contrast = CONTRAST)
-    threads: 10
+    threads: 1
     script:
-        "R/diff_genes.R"
+        "../R/diff_genes.R"

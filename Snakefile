@@ -16,7 +16,7 @@ RESULT_DIR          = config["results_dir"]
 
 units = pd.read_table(config["units"], dtype=str)
 CONTRAST = units['contrast'].unique().tolist()
-count_dat = pd.read_csv(config["general"]["count_dat"])
+COUNT_DAT = pd.read_csv(config["general"]["count_dat"])
 
 
 ##############
