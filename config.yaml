@@ -1,0 +1,8 @@
+## directories ##
+
+results_dir: "huangjiansong/"
+units : "units.tsv"
+
+general:
+  species : "mouse"
+  count_dat : "huangjiansong_mouse_counts.csv"

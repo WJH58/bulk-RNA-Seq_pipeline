@@ -1,0 +1,3 @@
+WorkflowError in line 59 of /Users/flora/Documents/GitHub/bulk-RNA-Seq_pipeline/Snakefile:
+Failed to open /Users/flora/Documents/GitHub/bulk-RNA-Seq_pipeline/rules/functioanl_analysis.smk.
+  File "/Users/flora/Documents/GitHub/bulk-RNA-Seq_pipeline/Snakefile", line 59, in <module>

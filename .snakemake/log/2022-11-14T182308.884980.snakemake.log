@@ -1,0 +1,4 @@
+KeyError in line 17 of /Users/flora/Documents/GitHub/bulk-RNA-Seq_pipeline/Snakefile:
+"None of ['sample'] are in the columns"
+  File "/Users/flora/Documents/GitHub/bulk-RNA-Seq_pipeline/Snakefile", line 17, in <module>
+  File "/Users/flora/opt/miniconda3/lib/python3.8/site-packages/pandas/core/frame.py", line 4551, in set_index
