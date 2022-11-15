@@ -1,6 +1,7 @@
 rule get_diff_genes:
     output:
-        diff_genes = RESULT_DIR   +   "{CONTRAST}/diff/diff_genes.xlsx"
+        diff_genes = RESULT_DIR   +   "{CONTRAST}/diff/diff_genes.xlsx",
+        volcano = RESULT_DIR   +   "{CONTRAST}/diff/volcano_plot.pdf"
     params:
         case = units[units.contrast == "{CONTRAST}"]['case'],
         control = units[units.contrast == "{CONTRAST}"]['control'],

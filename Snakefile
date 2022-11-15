@@ -29,7 +29,7 @@ wildcard_constraints:
 # Here we define the outputs of rules we want the pipeline to produce.
 # The varialble defined here is then used in the `rule all`.
 DIFF_GENES           =           expand(RESULT_DIR   +   "{contrast}/diff/diff_genes.xlsx", contrast = CONTRAST)
-#VOLCANO             =           expand(RESULT_DIR   +   "{contrast}/diff/volcano_plot.pdf", contrast = CONTRAST)
+VOLCANO              =           expand(RESULT_DIR   +   "{contrast}/diff/volcano_plot.pdf", contrast = CONTRAST)
 #BP_barplot          =           expand(RESULT_DIR   +   "{contrast}/go/all_BP_barplot.pdf", contrast = CONTRAST)
 #GSEA                =           expand(RESULT_DIR   +   "{contrast}/gsea/c1", contrast = CONTRAST)
 #KEGG                =           expand(RESULT_DIR   +   "{contrast}/kegg/KEGG.csv", contrast = CONTRAST)
@@ -38,8 +38,8 @@ DIFF_GENES           =           expand(RESULT_DIR   +   "{contrast}/diff/diff_g
 
 rule all:
     input:
-        DIFF_GENES
-       # VOLCANO,
+        DIFF_GENES,
+        VOLCANO
        # BP_barplot,
        # GSEA,
        # KEGG,
