@@ -1,14 +1,14 @@
 rule get_diff_genes:
     output:
-        diff_genes = expand(RESULT_DIR   +   "{contrast}/diff/diff_genes.xlsx", contrast = CONTRAST),
-        out_dir = expand(RESULT_DIR   +   "{contrast}/diff", contrast = CONTRAST)
+        diff_genes = RESULT_DIR   +   "{CONTRAST}/diff/diff_genes.xlsx"
     params:
-        case = units[units.contrast == expand("{contrast}", contrast = CONTRAST)]['case'],
-        control = units[units.contrast == expand("{contrast}", contrast = CONTRAST)]['control'],
+        case = units[units.contrast == "{CONTRAST}"]['case'],
+        control = units[units.contrast == "{CONTRAST}"]['control'],
         species = str(config['general']['species']),
-        count_dat = COUNT_DAT
+        count_dat = COUNT_DAT,
+        out_dir = RESULT_DIR   +   "{CONTRAST}"
     log:
-        expand(RESULT_DIR + "logs/{contrast}/get_diff_genes.log", contrast = CONTRAST)
+        RESULT_DIR + "{CONTRAST}/logs/get_diff_genes.log"
     threads: 1
     script:
         "../R/diff_genes.R"

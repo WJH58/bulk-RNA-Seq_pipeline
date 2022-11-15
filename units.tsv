@@ -1,2 +1,5 @@
 case	control	contrast
-S44 S50 S52	D13 D27 D33	S_vs_D
+L2A1 L2A2 L2A3	CV1 CV2 CV3	L2A_vs_CV
+shL2A1 shL2A2 shL2A3	shCT1 shCT2 shCT3	shL2A_vs_shCT
+shL2A_ml2a1 shL2A_ml2a2 shL2A_ml2a3	shCT1 shCT2 shCT3	shL2A_ml2a_vs_shCT
+
