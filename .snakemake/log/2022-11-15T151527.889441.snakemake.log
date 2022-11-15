@@ -1,0 +1,35 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	3	get_diff_genes
+	4
+
+[Tue Nov 15 15:15:28 2022]
+rule get_diff_genes:
+    output: wuhongkun/L2A_vs_CV/diff/diff_genes.xlsx, wuhongkun/L2A_vs_CV/diff/volcano_plot.pdf
+    log: wuhongkun/L2A_vs_CV/logs/get_diff_genes.log
+    jobid: 1
+    wildcards: CONTRAST=L2A_vs_CV
+
+[Tue Nov 15 15:15:28 2022]
+Error in rule get_diff_genes:
+    jobid: 1
+    output: wuhongkun/L2A_vs_CV/diff/diff_genes.xlsx, wuhongkun/L2A_vs_CV/diff/volcano_plot.pdf
+    log: wuhongkun/L2A_vs_CV/logs/get_diff_genes.log (check log file(s) for error message)
+
+RuleException:
+CalledProcessError in line 15 of /Users/flora/Documents/GitHub/bulk-RNA-Seq_pipeline/rules/diff.smk:
+Command 'set -euo pipefail;  Rscript --vanilla /Users/flora/Documents/GitHub/bulk-RNA-Seq_pipeline/.snakemake/scripts/tmp0ptso1q1.diff_genes.R' returned non-zero exit status 134.
+  File "/Users/flora/opt/miniconda3/lib/python3.8/site-packages/snakemake/executors/__init__.py", line 2168, in run_wrapper
+  File "/Users/flora/Documents/GitHub/bulk-RNA-Seq_pipeline/rules/diff.smk", line 15, in __rule_get_diff_genes
+  File "/Users/flora/opt/miniconda3/lib/python3.8/site-packages/snakemake/executors/__init__.py", line 529, in _callback
+  File "/Users/flora/opt/miniconda3/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+  File "/Users/flora/opt/miniconda3/lib/python3.8/site-packages/snakemake/executors/__init__.py", line 515, in cached_or_run
+  File "/Users/flora/opt/miniconda3/lib/python3.8/site-packages/snakemake/executors/__init__.py", line 2199, in run_wrapper
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /Users/flora/Documents/GitHub/bulk-RNA-Seq_pipeline/.snakemake/log/2022-11-15T151527.889441.snakemake.log

@@ -14,7 +14,7 @@ configfile: "config.yaml"
 
 RESULT_DIR          = config["results_dir"]
 
-units = pd.read_table(config["units"], dtype=str).set_index(["contrast"], drop = False)
+units = pd.read_table(config["units"], dtype=str)
 CONTRAST = units['contrast'].unique().tolist()
 COUNT_DAT = config["general"]["count_dat"]
 
