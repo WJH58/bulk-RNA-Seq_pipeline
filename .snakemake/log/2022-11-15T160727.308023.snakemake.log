@@ -1,0 +1,55 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 2
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	3	go
+	3	gsea
+	3	kegg
+	3	qc
+	13
+
+[Tue Nov 15 16:07:27 2022]
+localrule kegg:
+    input: wuhongkun/L2A_vs_CV/diff/diff_genes.xlsx
+    output: wuhongkun/L2A_vs_CV/kegg/KEGG.csv
+    log: wuhongkun/L2A_vs_CV/logs/kegg.log
+    jobid: 10
+    wildcards: CONTRAST=L2A_vs_CV
+
+Waiting at most 5 seconds for missing files.
+MissingOutputException in line 16 of /Users/flora/Documents/GitHub/bulk-RNA-Seq_pipeline/rules/functional_analysis.smk:
+Job completed successfully, but some output files are missing. Missing files after 5 seconds:
+wuhongkun/L2A_vs_CV/kegg/KEGG.csv
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+  File "/Users/flora/opt/miniconda3/lib/python3.8/site-packages/snakemake/executors/__init__.py", line 544, in handle_job_success
+  File "/Users/flora/opt/miniconda3/lib/python3.8/site-packages/snakemake/executors/__init__.py", line 225, in handle_job_success
+
+[Tue Nov 15 16:07:32 2022]
+rule go:
+    input: wuhongkun/L2A_vs_CV/diff/diff_genes.xlsx
+    output: wuhongkun/L2A_vs_CV/go/all_BP_barplot.pdf
+    log: wuhongkun/L2A_vs_CV/logs/go.log
+    jobid: 4
+    wildcards: CONTRAST=L2A_vs_CV
+
+[Tue Nov 15 16:07:32 2022]
+Error in rule go:
+    jobid: 4
+    output: wuhongkun/L2A_vs_CV/go/all_BP_barplot.pdf
+    log: wuhongkun/L2A_vs_CV/logs/go.log (check log file(s) for error message)
+
+RuleException:
+CalledProcessError in line 14 of /Users/flora/Documents/GitHub/bulk-RNA-Seq_pipeline/rules/functional_analysis.smk:
+Command 'set -euo pipefail;  Rscript --vanilla /Users/flora/Documents/GitHub/bulk-RNA-Seq_pipeline/.snakemake/scripts/tmpl4m5i353.go.R' returned non-zero exit status 134.
+  File "/Users/flora/opt/miniconda3/lib/python3.8/site-packages/snakemake/executors/__init__.py", line 2168, in run_wrapper
+  File "/Users/flora/Documents/GitHub/bulk-RNA-Seq_pipeline/rules/functional_analysis.smk", line 14, in __rule_go
+  File "/Users/flora/opt/miniconda3/lib/python3.8/site-packages/snakemake/executors/__init__.py", line 529, in _callback
+  File "/Users/flora/opt/miniconda3/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+  File "/Users/flora/opt/miniconda3/lib/python3.8/site-packages/snakemake/executors/__init__.py", line 515, in cached_or_run
+  File "/Users/flora/opt/miniconda3/lib/python3.8/site-packages/snakemake/executors/__init__.py", line 2199, in run_wrapper
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /Users/flora/Documents/GitHub/bulk-RNA-Seq_pipeline/.snakemake/log/2022-11-15T160727.308023.snakemake.log

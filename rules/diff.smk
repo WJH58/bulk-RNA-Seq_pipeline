@@ -10,6 +10,6 @@ rule get_diff_genes:
         out_dir = RESULT_DIR   +   "{CONTRAST}"
     log:
         RESULT_DIR + "{CONTRAST}/logs/get_diff_genes.log"
-    threads: 1
+    threads: 10
     script:
         "../R/diff_genes.R"

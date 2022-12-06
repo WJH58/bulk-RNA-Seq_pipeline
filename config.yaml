@@ -6,3 +6,4 @@ units : "units.tsv"
 general:
   species : "human"
   count_dat : "wuhongkun_human_counts.csv"
+  fpkm_dat : "wuhongkun_human.csv"
